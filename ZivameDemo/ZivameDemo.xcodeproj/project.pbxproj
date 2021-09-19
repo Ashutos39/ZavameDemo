@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD632A3C26F77BB100054A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A3B26F77BB100054A48 /* AppDelegate.swift */; };
+		FD632A3E26F77BB100054A48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A3D26F77BB100054A48 /* SceneDelegate.swift */; };
+		FD632A4026F77BB100054A48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A3F26F77BB100054A48 /* ViewController.swift */; };
+		FD632A4326F77BB100054A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD632A4126F77BB100054A48 /* Main.storyboard */; };
+		FD632A4626F77BB100054A48 /* ZivameDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD632A4426F77BB100054A48 /* ZivameDemo.xcdatamodeld */; };
+		FD632A4826F77BB400054A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD632A4726F77BB400054A48 /* Assets.xcassets */; };
+		FD632A4B26F77BB400054A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD632A4926F77BB400054A48 /* LaunchScreen.storyboard */; };
+		FD632A5626F77BB500054A48 /* ZivameDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A5526F77BB500054A48 /* ZivameDemoTests.swift */; };
+		FD632A6126F77BB500054A48 /* ZivameDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A6026F77BB500054A48 /* ZivameDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD632A5226F77BB500054A48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD632A3026F77BB100054A48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD632A3726F77BB100054A48;
+			remoteInfo = ZivameDemo;
+		};
+		FD632A5D26F77BB500054A48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD632A3026F77BB100054A48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD632A3726F77BB100054A48;
+			remoteInfo = ZivameDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD632A3826F77BB100054A48 /* ZivameDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZivameDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD632A3B26F77BB100054A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD632A3D26F77BB100054A48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FD632A3F26F77BB100054A48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD632A4226F77BB100054A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD632A4526F77BB100054A48 /* ZivameDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZivameDemo.xcdatamodel; sourceTree = "<group>"; };
+		FD632A4726F77BB400054A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD632A4A26F77BB400054A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD632A4C26F77BB400054A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD632A5126F77BB500054A48 /* ZivameDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZivameDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD632A5526F77BB500054A48 /* ZivameDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZivameDemoTests.swift; sourceTree = "<group>"; };
+		FD632A5726F77BB500054A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD632A5C26F77BB500054A48 /* ZivameDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZivameDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD632A6026F77BB500054A48 /* ZivameDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZivameDemoUITests.swift; sourceTree = "<group>"; };
+		FD632A6226F77BB500054A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD632A3526F77BB100054A48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD632A4E26F77BB500054A48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD632A5926F77BB500054A48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD632A2F26F77BB100054A48 = {
+			isa = PBXGroup;
+			children = (
+				FD632A3A26F77BB100054A48 /* ZivameDemo */,
+				FD632A5426F77BB500054A48 /* ZivameDemoTests */,
+				FD632A5F26F77BB500054A48 /* ZivameDemoUITests */,
+				FD632A3926F77BB100054A48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD632A3926F77BB100054A48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD632A3826F77BB100054A48 /* ZivameDemo.app */,
+				FD632A5126F77BB500054A48 /* ZivameDemoTests.xctest */,
+				FD632A5C26F77BB500054A48 /* ZivameDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD632A3A26F77BB100054A48 /* ZivameDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FD632A3B26F77BB100054A48 /* AppDelegate.swift */,
+				FD632A3D26F77BB100054A48 /* SceneDelegate.swift */,
+				FD632A3F26F77BB100054A48 /* ViewController.swift */,
+				FD632A4126F77BB100054A48 /* Main.storyboard */,
+				FD632A4726F77BB400054A48 /* Assets.xcassets */,
+				FD632A4926F77BB400054A48 /* LaunchScreen.storyboard */,
+				FD632A4C26F77BB400054A48 /* Info.plist */,
+				FD632A4426F77BB100054A48 /* ZivameDemo.xcdatamodeld */,
+			);
+			path = ZivameDemo;
+			sourceTree = "<group>";
+		};
+		FD632A5426F77BB500054A48 /* ZivameDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD632A5526F77BB500054A48 /* ZivameDemoTests.swift */,
+				FD632A5726F77BB500054A48 /* Info.plist */,
+			);
+			path = ZivameDemoTests;
+			sourceTree = "<group>";
+		};
+		FD632A5F26F77BB500054A48 /* ZivameDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD632A6026F77BB500054A48 /* ZivameDemoUITests.swift */,
+				FD632A6226F77BB500054A48 /* Info.plist */,
+			);
+			path = ZivameDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD632A3726F77BB100054A48 /* ZivameDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD632A6526F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemo" */;
+			buildPhases = (
+				FD632A3426F77BB100054A48 /* Sources */,
+				FD632A3526F77BB100054A48 /* Frameworks */,
+				FD632A3626F77BB100054A48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZivameDemo;
+			productName = ZivameDemo;
+			productReference = FD632A3826F77BB100054A48 /* ZivameDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD632A5026F77BB500054A48 /* ZivameDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD632A6826F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemoTests" */;
+			buildPhases = (
+				FD632A4D26F77BB500054A48 /* Sources */,
+				FD632A4E26F77BB500054A48 /* Frameworks */,
+				FD632A4F26F77BB500054A48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD632A5326F77BB500054A48 /* PBXTargetDependency */,
+			);
+			name = ZivameDemoTests;
+			productName = ZivameDemoTests;
+			productReference = FD632A5126F77BB500054A48 /* ZivameDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD632A5B26F77BB500054A48 /* ZivameDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD632A6B26F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemoUITests" */;
+			buildPhases = (
+				FD632A5826F77BB500054A48 /* Sources */,
+				FD632A5926F77BB500054A48 /* Frameworks */,
+				FD632A5A26F77BB500054A48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD632A5E26F77BB500054A48 /* PBXTargetDependency */,
+			);
+			name = ZivameDemoUITests;
+			productName = ZivameDemoUITests;
+			productReference = FD632A5C26F77BB500054A48 /* ZivameDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD632A3026F77BB100054A48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FD632A3726F77BB100054A48 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					FD632A5026F77BB500054A48 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FD632A3726F77BB100054A48;
+					};
+					FD632A5B26F77BB500054A48 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FD632A3726F77BB100054A48;
+					};
+				};
+			};
+			buildConfigurationList = FD632A3326F77BB100054A48 /* Build configuration list for PBXProject "ZivameDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD632A2F26F77BB100054A48;
+			productRefGroup = FD632A3926F77BB100054A48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD632A3726F77BB100054A48 /* ZivameDemo */,
+				FD632A5026F77BB500054A48 /* ZivameDemoTests */,
+				FD632A5B26F77BB500054A48 /* ZivameDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD632A3626F77BB100054A48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD632A4B26F77BB400054A48 /* LaunchScreen.storyboard in Resources */,
+				FD632A4826F77BB400054A48 /* Assets.xcassets in Resources */,
+				FD632A4326F77BB100054A48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD632A4F26F77BB500054A48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD632A5A26F77BB500054A48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD632A3426F77BB100054A48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD632A4626F77BB100054A48 /* ZivameDemo.xcdatamodeld in Sources */,
+				FD632A4026F77BB100054A48 /* ViewController.swift in Sources */,
+				FD632A3C26F77BB100054A48 /* AppDelegate.swift in Sources */,
+				FD632A3E26F77BB100054A48 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD632A4D26F77BB500054A48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD632A5626F77BB500054A48 /* ZivameDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD632A5826F77BB500054A48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD632A6126F77BB500054A48 /* ZivameDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD632A5326F77BB500054A48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD632A3726F77BB100054A48 /* ZivameDemo */;
+			targetProxy = FD632A5226F77BB500054A48 /* PBXContainerItemProxy */;
+		};
+		FD632A5E26F77BB500054A48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD632A3726F77BB100054A48 /* ZivameDemo */;
+			targetProxy = FD632A5D26F77BB500054A48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD632A4126F77BB100054A48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD632A4226F77BB100054A48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD632A4926F77BB400054A48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD632A4A26F77BB400054A48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD632A6326F77BB500054A48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD632A6426F77BB500054A48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD632A6626F77BB500054A48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZivameDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutos.ZivameDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD632A6726F77BB500054A48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZivameDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutos.ZivameDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD632A6926F77BB500054A48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZivameDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutos.ZivameDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZivameDemo.app/ZivameDemo";
+			};
+			name = Debug;
+		};
+		FD632A6A26F77BB500054A48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZivameDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutos.ZivameDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZivameDemo.app/ZivameDemo";
+			};
+			name = Release;
+		};
+		FD632A6C26F77BB500054A48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZivameDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutos.ZivameDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZivameDemo;
+			};
+			name = Debug;
+		};
+		FD632A6D26F77BB500054A48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZivameDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutos.ZivameDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZivameDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD632A3326F77BB100054A48 /* Build configuration list for PBXProject "ZivameDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD632A6326F77BB500054A48 /* Debug */,
+				FD632A6426F77BB500054A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD632A6526F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD632A6626F77BB500054A48 /* Debug */,
+				FD632A6726F77BB500054A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD632A6826F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD632A6926F77BB500054A48 /* Debug */,
+				FD632A6A26F77BB500054A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD632A6B26F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD632A6C26F77BB500054A48 /* Debug */,
+				FD632A6D26F77BB500054A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD632A4426F77BB100054A48 /* ZivameDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD632A4526F77BB100054A48 /* ZivameDemo.xcdatamodel */,
+			);
+			currentVersion = FD632A4526F77BB100054A48 /* ZivameDemo.xcdatamodel */;
+			path = ZivameDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FD632A3026F77BB100054A48 /* Project object */;
+}
