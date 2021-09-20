@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1584CAE25732D379A4B0BAF2 /* Pods_ZivameDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517CADE96FEF2A746A25E81E /* Pods_ZivameDemo.framework */; };
+		C7B6A62B80A91D7292544DFE /* Pods_ZivameDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3596BC20A42E0254003F7647 /* Pods_ZivameDemoTests.framework */; };
+		F591E8E4E811D0AA6BBEB2AF /* Pods_ZivameDemo_ZivameDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E663CC63497E03DD5D2CCB67 /* Pods_ZivameDemo_ZivameDemoUITests.framework */; };
+		FD3FEC5726F7867100DA34C4 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FEC5626F7867100DA34C4 /* ProductViewModel.swift */; };
+		FD3FEC5C26F7874F00DA34C4 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FEC5B26F7874F00DA34C4 /* ProductDetails.swift */; };
+		FD3FEC6A26F78A1F00DA34C4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FEC6826F78A1F00DA34C4 /* ProductTableViewCell.swift */; };
+		FD3FEC6B26F78A1F00DA34C4 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3FEC6926F78A1F00DA34C4 /* ProductTableViewCell.xib */; };
 		FD632A3C26F77BB100054A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A3B26F77BB100054A48 /* AppDelegate.swift */; };
 		FD632A3E26F77BB100054A48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A3D26F77BB100054A48 /* SceneDelegate.swift */; };
-		FD632A4026F77BB100054A48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A3F26F77BB100054A48 /* ViewController.swift */; };
 		FD632A4326F77BB100054A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD632A4126F77BB100054A48 /* Main.storyboard */; };
 		FD632A4626F77BB100054A48 /* ZivameDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD632A4426F77BB100054A48 /* ZivameDemo.xcdatamodeld */; };
 		FD632A4826F77BB400054A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD632A4726F77BB400054A48 /* Assets.xcassets */; };
 		FD632A4B26F77BB400054A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD632A4926F77BB400054A48 /* LaunchScreen.storyboard */; };
 		FD632A5626F77BB500054A48 /* ZivameDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A5526F77BB500054A48 /* ZivameDemoTests.swift */; };
 		FD632A6126F77BB500054A48 /* ZivameDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A6026F77BB500054A48 /* ZivameDemoUITests.swift */; };
+		FD632A8D26F7802C00054A48 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A8C26F7802C00054A48 /* ProductViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E759FAEC66482E2E74560BB /* Pods-ZivameDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZivameDemo.debug.xcconfig"; path = "Target Support Files/Pods-ZivameDemo/Pods-ZivameDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3596BC20A42E0254003F7647 /* Pods_ZivameDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZivameDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AF81A7E79DF4549990872A0 /* Pods-ZivameDemo-ZivameDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZivameDemo-ZivameDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-ZivameDemo-ZivameDemoUITests/Pods-ZivameDemo-ZivameDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		517CADE96FEF2A746A25E81E /* Pods_ZivameDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZivameDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		652AEB502419A329D881C047 /* Pods-ZivameDemo-ZivameDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZivameDemo-ZivameDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZivameDemo-ZivameDemoUITests/Pods-ZivameDemo-ZivameDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8A717DC036E2C5F20B7E254 /* Pods-ZivameDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZivameDemo.release.xcconfig"; path = "Target Support Files/Pods-ZivameDemo/Pods-ZivameDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CCAD75680A13C871D736EBA1 /* Pods-ZivameDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZivameDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-ZivameDemoTests/Pods-ZivameDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD902CC848696C8AD1FCFA19 /* Pods-ZivameDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZivameDemoTests.release.xcconfig"; path = "Target Support Files/Pods-ZivameDemoTests/Pods-ZivameDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		E663CC63497E03DD5D2CCB67 /* Pods_ZivameDemo_ZivameDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZivameDemo_ZivameDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3FEC5626F7867100DA34C4 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		FD3FEC5B26F7874F00DA34C4 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
+		FD3FEC6826F78A1F00DA34C4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		FD3FEC6926F78A1F00DA34C4 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		FD632A3826F77BB100054A48 /* ZivameDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZivameDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD632A3B26F77BB100054A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD632A3D26F77BB100054A48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FD632A3F26F77BB100054A48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD632A4226F77BB100054A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD632A4526F77BB100054A48 /* ZivameDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZivameDemo.xcdatamodel; sourceTree = "<group>"; };
 		FD632A4726F77BB400054A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +70,7 @@
 		FD632A5C26F77BB500054A48 /* ZivameDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZivameDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD632A6026F77BB500054A48 /* ZivameDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZivameDemoUITests.swift; sourceTree = "<group>"; };
 		FD632A6226F77BB500054A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD632A8C26F7802C00054A48 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1584CAE25732D379A4B0BAF2 /* Pods_ZivameDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B6A62B80A91D7292544DFE /* Pods_ZivameDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +94,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F591E8E4E811D0AA6BBEB2AF /* Pods_ZivameDemo_ZivameDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2B55D934AF0AD15483B7327 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E759FAEC66482E2E74560BB /* Pods-ZivameDemo.debug.xcconfig */,
+				B8A717DC036E2C5F20B7E254 /* Pods-ZivameDemo.release.xcconfig */,
+				652AEB502419A329D881C047 /* Pods-ZivameDemo-ZivameDemoUITests.debug.xcconfig */,
+				3AF81A7E79DF4549990872A0 /* Pods-ZivameDemo-ZivameDemoUITests.release.xcconfig */,
+				CCAD75680A13C871D736EBA1 /* Pods-ZivameDemoTests.debug.xcconfig */,
+				CD902CC848696C8AD1FCFA19 /* Pods-ZivameDemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E133A039A1BC8CDF244FC444 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				517CADE96FEF2A746A25E81E /* Pods_ZivameDemo.framework */,
+				E663CC63497E03DD5D2CCB67 /* Pods_ZivameDemo_ZivameDemoUITests.framework */,
+				3596BC20A42E0254003F7647 /* Pods_ZivameDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD3FEC6F26F78A2700DA34C4 /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FEC6826F78A1F00DA34C4 /* ProductTableViewCell.swift */,
+				FD3FEC6926F78A1F00DA34C4 /* ProductTableViewCell.xib */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
 		FD632A2F26F77BB100054A48 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +140,8 @@
 				FD632A5426F77BB500054A48 /* ZivameDemoTests */,
 				FD632A5F26F77BB500054A48 /* ZivameDemoUITests */,
 				FD632A3926F77BB100054A48 /* Products */,
+				D2B55D934AF0AD15483B7327 /* Pods */,
+				E133A039A1BC8CDF244FC444 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +158,9 @@
 		FD632A3A26F77BB100054A48 /* ZivameDemo */ = {
 			isa = PBXGroup;
 			children = (
-				FD632A3B26F77BB100054A48 /* AppDelegate.swift */,
-				FD632A3D26F77BB100054A48 /* SceneDelegate.swift */,
-				FD632A3F26F77BB100054A48 /* ViewController.swift */,
-				FD632A4126F77BB100054A48 /* Main.storyboard */,
+				FD632A7526F77C4900054A48 /* AppDelegate */,
+				FD632A7A26F77D1000054A48 /* HomeScreen */,
+				FD632A7926F77C5800054A48 /* StoryBoard */,
 				FD632A4726F77BB400054A48 /* Assets.xcassets */,
 				FD632A4926F77BB400054A48 /* LaunchScreen.storyboard */,
 				FD632A4C26F77BB400054A48 /* Info.plist */,
@@ -131,6 +187,58 @@
 			path = ZivameDemoUITests;
 			sourceTree = "<group>";
 		};
+		FD632A7126F77C3300054A48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD632A8C26F7802C00054A48 /* ProductViewController.swift */,
+				FD3FEC6F26F78A2700DA34C4 /* ProductCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD632A7526F77C4900054A48 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FD632A3B26F77BB100054A48 /* AppDelegate.swift */,
+				FD632A3D26F77BB100054A48 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FD632A7926F77C5800054A48 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				FD632A4126F77BB100054A48 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		FD632A7A26F77D1000054A48 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FD632A8226F77D4900054A48 /* Model */,
+				FD632A7126F77C3300054A48 /* View */,
+				FD632A8126F77D2700054A48 /* ViewModel */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		FD632A8126F77D2700054A48 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FEC5626F7867100DA34C4 /* ProductViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FD632A8226F77D4900054A48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FEC5B26F7874F00DA34C4 /* ProductDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD632A6526F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemo" */;
 			buildPhases = (
+				4F62804D959F4FDF91C8FB5A /* [CP] Check Pods Manifest.lock */,
 				FD632A3426F77BB100054A48 /* Sources */,
 				FD632A3526F77BB100054A48 /* Frameworks */,
 				FD632A3626F77BB100054A48 /* Resources */,
+				BA33F2FAFE98EE2C610FEED2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD632A6826F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemoTests" */;
 			buildPhases = (
+				0F56C6D66C8538146EFCDEF9 /* [CP] Check Pods Manifest.lock */,
 				FD632A4D26F77BB500054A48 /* Sources */,
 				FD632A4E26F77BB500054A48 /* Frameworks */,
 				FD632A4F26F77BB500054A48 /* Resources */,
@@ -173,9 +284,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD632A6B26F77BB500054A48 /* Build configuration list for PBXNativeTarget "ZivameDemoUITests" */;
 			buildPhases = (
+				7BC9615C7FC4FBA48FB1C423 /* [CP] Check Pods Manifest.lock */,
 				FD632A5826F77BB500054A48 /* Sources */,
 				FD632A5926F77BB500054A48 /* Frameworks */,
 				FD632A5A26F77BB500054A48 /* Resources */,
+				342A76F1840FBC995DFB567D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD632A4B26F77BB400054A48 /* LaunchScreen.storyboard in Resources */,
+				FD3FEC6B26F78A1F00DA34C4 /* ProductTableViewCell.xib in Resources */,
 				FD632A4826F77BB400054A48 /* Assets.xcassets in Resources */,
 				FD632A4326F77BB100054A48 /* Main.storyboard in Resources */,
 			);
@@ -256,15 +370,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F56C6D66C8538146EFCDEF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZivameDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		342A76F1840FBC995DFB567D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZivameDemo-ZivameDemoUITests/Pods-ZivameDemo-ZivameDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZivameDemo-ZivameDemoUITests/Pods-ZivameDemo-ZivameDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZivameDemo-ZivameDemoUITests/Pods-ZivameDemo-ZivameDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F62804D959F4FDF91C8FB5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZivameDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BC9615C7FC4FBA48FB1C423 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZivameDemo-ZivameDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA33F2FAFE98EE2C610FEED2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZivameDemo/Pods-ZivameDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZivameDemo/Pods-ZivameDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZivameDemo/Pods-ZivameDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD632A3426F77BB100054A48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FD632A4626F77BB100054A48 /* ZivameDemo.xcdatamodeld in Sources */,
-				FD632A4026F77BB100054A48 /* ViewController.swift in Sources */,
 				FD632A3C26F77BB100054A48 /* AppDelegate.swift in Sources */,
+				FD3FEC6A26F78A1F00DA34C4 /* ProductTableViewCell.swift in Sources */,
+				FD632A8D26F7802C00054A48 /* ProductViewController.swift in Sources */,
 				FD632A3E26F77BB100054A48 /* SceneDelegate.swift in Sources */,
+				FD3FEC5C26F7874F00DA34C4 /* ProductDetails.swift in Sources */,
+				FD3FEC5726F7867100DA34C4 /* ProductViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +657,7 @@
 		};
 		FD632A6626F77BB500054A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E759FAEC66482E2E74560BB /* Pods-ZivameDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +676,7 @@
 		};
 		FD632A6726F77BB500054A48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A717DC036E2C5F20B7E254 /* Pods-ZivameDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +695,7 @@
 		};
 		FD632A6926F77BB500054A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCAD75680A13C871D736EBA1 /* Pods-ZivameDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +717,7 @@
 		};
 		FD632A6A26F77BB500054A48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD902CC848696C8AD1FCFA19 /* Pods-ZivameDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +739,7 @@
 		};
 		FD632A6C26F77BB500054A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 652AEB502419A329D881C047 /* Pods-ZivameDemo-ZivameDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +759,7 @@
 		};
 		FD632A6D26F77BB500054A48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AF81A7E79DF4549990872A0 /* Pods-ZivameDemo-ZivameDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
