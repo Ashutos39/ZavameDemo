@@ -24,12 +24,12 @@ class CheckOutViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
             guard let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else { return }
             self.viewModel.processOrderPlaced(moc: managedObjectContext) { [ weak self] (isOrderPlaced) in
+                MBProgressHUD.hide(for: self?.view ?? UIView(), animated: true)
                 if isOrderPlaced {
                     self?.showAlert(withTitleMessageAndAction: "Sucess", message: "Thanks for your order.", action: true)
                 } else {
                     print("Something went wrong")
                 }
-                MBProgressHUD.hide(for: self?.view ?? UIView(), animated: true)
             }
         }
     }

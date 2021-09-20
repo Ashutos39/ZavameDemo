@@ -42,6 +42,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VU2-LX-bLi">
                                 <rect key="frame" x="10" y="822" width="394" height="50"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcE-hH-aVB">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="u2i-a3-xhG"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVE-6n-9M5">
                                         <rect key="frame" x="5" y="0.0" width="50" height="50"/>
                                         <subviews>
@@ -83,26 +90,11 @@
                                             <action selector="checkoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w6v-bH-Jsn"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcE-hH-aVB">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="u2i-a3-xhG"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJj-Xn-VFI">
-                                        <rect key="frame" x="65" y="25" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3wG-LC-2pr"/>
                                     <constraint firstItem="mVE-6n-9M5" firstAttribute="leading" secondItem="VU2-LX-bLi" secondAttribute="leading" constant="5" id="8BG-ND-4Qr"/>
-                                    <constraint firstItem="MJj-Xn-VFI" firstAttribute="leading" secondItem="mVE-6n-9M5" secondAttribute="trailing" constant="10" id="CjN-cl-LAU"/>
-                                    <constraint firstItem="MJj-Xn-VFI" firstAttribute="centerY" secondItem="bs3-cZ-Gab" secondAttribute="centerY" id="NOj-BY-zNI"/>
                                     <constraint firstItem="mVE-6n-9M5" firstAttribute="top" secondItem="VU2-LX-bLi" secondAttribute="top" id="QHJ-Ax-my6"/>
                                     <constraint firstAttribute="trailing" secondItem="vHS-eM-OLF" secondAttribute="trailing" constant="10" id="cdx-hT-dpz"/>
                                     <constraint firstAttribute="bottom" secondItem="mVE-6n-9M5" secondAttribute="bottom" id="hxR-xi-bDx"/>

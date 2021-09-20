@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class ProductViewController: UIViewController {
     
@@ -96,10 +97,13 @@ private extension ProductViewController {
    }
     
     func setupUI() {
-       
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         productViewModel.getProductFromAPI { [weak self] (receivedResponse) in
+            MBProgressHUD.hide(for: self?.view ?? UIView(), animated: true)
             if receivedResponse {
                 self?.productTableView.reloadData()
+            } else {
+                print("unable to fetch the data from API")
             }
         }
         
