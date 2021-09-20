@@ -14,6 +14,9 @@
 		FD3FEC5C26F7874F00DA34C4 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FEC5B26F7874F00DA34C4 /* ProductDetails.swift */; };
 		FD3FEC6A26F78A1F00DA34C4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FEC6826F78A1F00DA34C4 /* ProductTableViewCell.swift */; };
 		FD3FEC6B26F78A1F00DA34C4 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3FEC6926F78A1F00DA34C4 /* ProductTableViewCell.xib */; };
+		FD3FEC8926F8509200DA34C4 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FEC8826F8509200DA34C4 /* CheckOutViewController.swift */; };
+		FD3FECA926F85C1A00DA34C4 /* ProductInCart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FECA726F85C1A00DA34C4 /* ProductInCart+CoreDataClass.swift */; };
+		FD3FECAA26F85C1A00DA34C4 /* ProductInCart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FECA826F85C1A00DA34C4 /* ProductInCart+CoreDataProperties.swift */; };
 		FD632A3C26F77BB100054A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A3B26F77BB100054A48 /* AppDelegate.swift */; };
 		FD632A3E26F77BB100054A48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD632A3D26F77BB100054A48 /* SceneDelegate.swift */; };
 		FD632A4326F77BB100054A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD632A4126F77BB100054A48 /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 		FD3FEC5B26F7874F00DA34C4 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		FD3FEC6826F78A1F00DA34C4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		FD3FEC6926F78A1F00DA34C4 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		FD3FEC8826F8509200DA34C4 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
+		FD3FECA726F85C1A00DA34C4 /* ProductInCart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductInCart+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FD3FECA826F85C1A00DA34C4 /* ProductInCart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductInCart+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FD632A3826F77BB100054A48 /* ZivameDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZivameDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD632A3B26F77BB100054A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD632A3D26F77BB100054A48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +139,31 @@
 			path = ProductCell;
 			sourceTree = "<group>";
 		};
+		FD3FEC9026F8509900DA34C4 /* CheckOut */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FEC9526F850A800DA34C4 /* View */,
+			);
+			path = CheckOut;
+			sourceTree = "<group>";
+		};
+		FD3FEC9526F850A800DA34C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FEC8826F8509200DA34C4 /* CheckOutViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD3FECA326F8529100DA34C4 /* CoreDataEntity */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FECA726F85C1A00DA34C4 /* ProductInCart+CoreDataClass.swift */,
+				FD3FECA826F85C1A00DA34C4 /* ProductInCart+CoreDataProperties.swift */,
+			);
+			path = CoreDataEntity;
+			sourceTree = "<group>";
+		};
 		FD632A2F26F77BB100054A48 = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +189,10 @@
 		FD632A3A26F77BB100054A48 /* ZivameDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD3FECA326F8529100DA34C4 /* CoreDataEntity */,
 				FD632A7526F77C4900054A48 /* AppDelegate */,
 				FD632A7A26F77D1000054A48 /* HomeScreen */,
+				FD3FEC9026F8509900DA34C4 /* CheckOut */,
 				FD632A7926F77C5800054A48 /* StoryBoard */,
 				FD632A4726F77BB400054A48 /* Assets.xcassets */,
 				FD632A4926F77BB400054A48 /* LaunchScreen.storyboard */,
@@ -482,8 +515,11 @@
 				FD632A3C26F77BB100054A48 /* AppDelegate.swift in Sources */,
 				FD3FEC6A26F78A1F00DA34C4 /* ProductTableViewCell.swift in Sources */,
 				FD632A8D26F7802C00054A48 /* ProductViewController.swift in Sources */,
+				FD3FEC8926F8509200DA34C4 /* CheckOutViewController.swift in Sources */,
+				FD3FECA926F85C1A00DA34C4 /* ProductInCart+CoreDataClass.swift in Sources */,
 				FD632A3E26F77BB100054A48 /* SceneDelegate.swift in Sources */,
 				FD3FEC5C26F7874F00DA34C4 /* ProductDetails.swift in Sources */,
+				FD3FECAA26F85C1A00DA34C4 /* ProductInCart+CoreDataProperties.swift in Sources */,
 				FD3FEC5726F7867100DA34C4 /* ProductViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

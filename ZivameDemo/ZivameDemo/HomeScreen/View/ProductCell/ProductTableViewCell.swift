@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol ProductTableViewCellDelegate {
-    func selectionButtonPressed(withSelectedIndex index: Int)
+    func addProduct(withSelectedIndex index: Int)
+    func removeProduct(withSelectedIndex index: Int)
 }
 
 class ProductTableViewCell: UITableViewCell {
@@ -33,14 +35,26 @@ class ProductTableViewCell: UITableViewCell {
     }
     
     @IBAction func productSelectionButton(_ sender: UIButton) {
-        cellDelegate?.selectionButtonPressed(withSelectedIndex: sender.tag)
+        if prductSelectionButton.titleLabel?.text == "Add" {
+            cellDelegate?.addProduct(withSelectedIndex: sender.tag)
+        } else {
+            cellDelegate?.removeProduct(withSelectedIndex: sender.tag)
+        }
     }
     
-    func updateUI(product: Product) {
+    func updateUI(product: Product, isAddedToCart: Bool) {
         productNameLabel.text = product.name
         productPriceLabel.text = "₹ \(product.price ?? "0")"
-        
+        if let imageUrl = product.imageURL {
+            productImageview.kf.setImage(with: URL(string: imageUrl))
+        }
+        if isAddedToCart {
+            prductSelectionButton.setTitle("Remove", for: .normal)
+        } else {
+            prductSelectionButton.setTitle("Add", for: .normal)
+        }
     }
+    
 }
 
 private extension ProductTableViewCell {
