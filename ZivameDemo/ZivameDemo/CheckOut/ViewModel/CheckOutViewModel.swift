@@ -10,17 +10,21 @@ import CoreData
 
 class CheckOutViewModel {
     
-    func processOrderPlaced(moc: NSManagedObjectContext, completionHandler: (Bool) -> Void) {
-       
-        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductInCart")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
-        do {
-            try moc.execute(deleteRequest)
-            try moc.save()
-            completionHandler(true)
-        } catch {
-            print ("There was an error")
-            completionHandler(false)
+    var addedProductsInCart = [ProductInCart]()
+    
+    func removeProductFromCoreData(managedObjectContext: NSManagedObjectContext,product: Product, removeCompletionHandler: (Bool) -> Void) {// Remove product from cart
+        if let index = addedProductsInCart.firstIndex(where: {$0.name == product.name}) {
+            
+            managedObjectContext.delete(addedProductsInCart[index] as NSManagedObject)
+            addedProductsInCart.remove(at: index)
+            let _ : NSError! = nil
+            do {
+                try managedObjectContext.save()
+                removeCompletionHandler(true)
+            } catch {
+                removeCompletionHandler(false)
+                print("error : \(error)")
+            }
         }
     }
 }

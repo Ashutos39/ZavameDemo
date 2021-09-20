@@ -32,10 +32,8 @@ class ProductViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        productViewModel.fetchAddedProductsFromCart { (isFetched) in
-            cartProductCountLabel.text = "\(productViewModel.addedProductsInCart.count)"
-            self.productTableView.reloadData()
-        }
+        self.navigationController?.isNavigationBarHidden = false
+        getDataFromLocalDB()
     }
     
     @IBAction func segmentDidChanged(_ sender: UISegmentedControl) {
@@ -48,7 +46,9 @@ class ProductViewController: UIViewController {
             showAlert(withTitleMessageAndAction: "Warning!!!", message: " Please add products to checkout", action: false)
         } else {// move to checkout screen
             let vc = storyboard?.instantiateViewController(withIdentifier: "CheckOutViewController") as! CheckOutViewController
-              navigationController?.pushViewController(vc, animated: true)
+            vc.initData(cartData: productViewModel.addedProductsInCart)
+            vc.delegate = self
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
@@ -91,6 +91,13 @@ extension ProductViewController: ProductTableViewCellDelegate {
     }
 }
 
+extension ProductViewController: CheckOutViewControllerDelegate {
+    func checkoutPressed() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "OrderPlacedViewController") as! OrderPlacedViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
 private extension ProductViewController {
     func registerCell() {
        productTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
@@ -107,6 +114,13 @@ private extension ProductViewController {
             }
         }
         
+    }
+    
+    func getDataFromLocalDB() {
+        productViewModel.fetchAddedProductsFromCart { (isFetched) in
+            cartProductCountLabel.text = "\(productViewModel.addedProductsInCart.count)"
+            self.productTableView.reloadData()
+        }
     }
 }
 

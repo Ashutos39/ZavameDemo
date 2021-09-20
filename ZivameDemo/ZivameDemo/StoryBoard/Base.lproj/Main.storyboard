@@ -132,20 +132,96 @@
             </objects>
             <point key="canvasLocation" x="502.89855072463774" y="93.75"/>
         </scene>
-        <!--Check Out View Controller-->
+        <!--Order Placed View Controller-->
         <scene sceneID="NWi-n0-CR8">
             <objects>
-                <viewController storyboardIdentifier="CheckOutViewController" id="yVV-rT-qoe" customClass="CheckOutViewController" customModule="ZivameDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderPlacedViewController" id="yVV-rT-qoe" customClass="OrderPlacedViewController" customModule="ZivameDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QFC-95-Zt8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order has been placed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-FE-ukt">
+                                <rect key="frame" x="102.5" y="437.5" width="209" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-os-8Xc">
+                                <rect key="frame" x="10" y="802" width="394" height="30"/>
+                                <state key="normal" title="Continue Shopping"/>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="yVV-rT-qoe" eventType="touchUpInside" id="HJV-7y-UOh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aP9-cU-YNs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aP9-cU-YNs" firstAttribute="trailing" secondItem="Xst-os-8Xc" secondAttribute="trailing" constant="10" id="FDf-Xj-c96"/>
+                            <constraint firstItem="hqu-FE-ukt" firstAttribute="centerX" secondItem="QFC-95-Zt8" secondAttribute="centerX" id="RLd-V9-jSt"/>
+                            <constraint firstItem="aP9-cU-YNs" firstAttribute="bottom" secondItem="Xst-os-8Xc" secondAttribute="bottom" constant="30" id="Yrg-PB-mCG"/>
+                            <constraint firstItem="Xst-os-8Xc" firstAttribute="leading" secondItem="aP9-cU-YNs" secondAttribute="leading" constant="10" id="b27-sp-5Ig"/>
+                            <constraint firstItem="hqu-FE-ukt" firstAttribute="centerY" secondItem="QFC-95-Zt8" secondAttribute="centerY" id="h0d-vU-eTP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukC-kp-HbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347.8260869565217" y="91.741071428571431"/>
+            <point key="canvasLocation" x="2105.7971014492755" y="85.714285714285708"/>
+        </scene>
+        <!--Check Out View Controller-->
+        <scene sceneID="Plk-Mo-3Gi">
+            <objects>
+                <viewController storyboardIdentifier="CheckOutViewController" id="xfC-E8-ckT" customClass="CheckOutViewController" customModule="ZivameDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Kv-Bf-sCa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOj-QJ-aqz">
+                                <rect key="frame" x="157" y="822" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="X44-bB-dee"/>
+                                </constraints>
+                                <state key="normal" title="CheckOut">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkoutButtonPressed:" destination="xfC-E8-ckT" eventType="touchUpInside" id="fI2-9U-dkw"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KsV-lS-9KO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="cnT-FD-HdR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="12"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="xfC-E8-ckT" id="p5R-KF-sgX"/>
+                                    <outlet property="delegate" destination="xfC-E8-ckT" id="pVD-bE-wkW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Abg-cq-e7C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KsV-lS-9KO" firstAttribute="leading" secondItem="Abg-cq-e7C" secondAttribute="leading" id="Pbo-1W-jyC"/>
+                            <constraint firstItem="KsV-lS-9KO" firstAttribute="top" secondItem="Abg-cq-e7C" secondAttribute="top" id="SfK-dk-1UZ"/>
+                            <constraint firstItem="vOj-QJ-aqz" firstAttribute="centerX" secondItem="3Kv-Bf-sCa" secondAttribute="centerX" id="Sfj-7k-yC6"/>
+                            <constraint firstItem="Abg-cq-e7C" firstAttribute="bottom" secondItem="vOj-QJ-aqz" secondAttribute="bottom" constant="10" id="gOd-tW-s7x"/>
+                            <constraint firstItem="vOj-QJ-aqz" firstAttribute="top" secondItem="KsV-lS-9KO" secondAttribute="bottom" constant="10" id="rOu-DF-yhS"/>
+                            <constraint firstItem="Abg-cq-e7C" firstAttribute="trailing" secondItem="KsV-lS-9KO" secondAttribute="trailing" id="t7t-MF-LUY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkoutButton" destination="vOj-QJ-aqz" id="apX-hj-apF"/>
+                        <outlet property="checkoutTableview" destination="KsV-lS-9KO" id="43a-UW-7MQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OoX-AU-tdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.521739130435" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R9L-iP-srg">
