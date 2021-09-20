@@ -45,10 +45,16 @@ class ProductViewModel {
             return allProductData.filter( {Int($0.price ?? "0") ?? 0 <= 1000})
         }
     }
-    
-    func addProductToCoreData(productDetails: Product, completionHandler: (Bool) -> Void) {
         
-       guard let managedObjectContext = (UIApplication.shared.delegate
+    func isProductAlreadyAddedToCart(product: Product) -> Bool {
+        let currentProduct = addedProductsInCart.filter({ $0.name == product.name })
+        return !currentProduct.isEmpty
+    }
+}
+
+extension ProductViewModel {
+    func addProductToCoreData(productDetails: Product, completionHandler: (Bool) -> Void) { // add product to cart
+        guard let managedObjectContext = (UIApplication.shared.delegate
                                             as? AppDelegate)?.persistentContainer.viewContext else { return }
         guard let entityDescription =
                 NSEntityDescription.entity(forEntityName: "ProductInCart",in: managedObjectContext) else { return  }
@@ -67,28 +73,36 @@ class ProductViewModel {
         }
     }
     
-    func removeProductFromCoreData(product: Product) {
-        
+    func removeProductFromCoreData(product: Product, removeCompletionHandler: (Bool) -> Void) {// Remove product from cart
+        if let index = addedProductsInCart.firstIndex(where: {$0.name == product.name}) {
+            
+            guard let managedObjectContext = (UIApplication.shared.delegate
+                                                as? AppDelegate)?.persistentContainer.viewContext else { return }
+            managedObjectContext.delete(addedProductsInCart[index] as NSManagedObject)
+            addedProductsInCart.remove(at: index)
+            let _ : NSError! = nil
+            do {
+                try managedObjectContext.save()
+                removeCompletionHandler(true)
+            } catch {
+                removeCompletionHandler(false)
+                print("error : \(error)")
+            }
+        }
     }
     
     func fetchAddedProductsFromCart(fetchedCompletionHandler: (Bool) -> Void){
         guard let managedObjectContext = (UIApplication.shared.delegate
                                             as? AppDelegate)?.persistentContainer.viewContext else { return }
         let entityDescription = NSEntityDescription.entity(forEntityName: "ProductInCart",in: managedObjectContext)
-        
-        //create a fetch request, telling it about the entity
         let fetchRequest: NSFetchRequest<ProductInCart> = ProductInCart.fetchRequest()
         fetchRequest.entity = entityDescription
         do {
             addedProductsInCart = try managedObjectContext.fetch(fetchRequest)
+            fetchedCompletionHandler(true)
         } catch {
             print("Error with request: \(error)")
+            fetchedCompletionHandler(false)
         }
     }
-    
-    func isProductAlreadyAddedToCart(product: Product) -> Bool {
-        let currentProduct = addedProductsInCart.filter({ $0.name == product.name })
-        return currentProduct.isEmpty
-    }
 }
-

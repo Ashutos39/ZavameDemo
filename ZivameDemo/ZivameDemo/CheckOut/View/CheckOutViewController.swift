@@ -6,24 +6,31 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class CheckOutViewController: UIViewController {
 
+    private let viewModel =  CheckOutViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpUI()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUpUI() {
+        self.title = "Checkout"
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+            guard let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else { return }
+            self.viewModel.processOrderPlaced(moc: managedObjectContext) { [ weak self] (isOrderPlaced) in
+                if isOrderPlaced {
+                    self?.showAlert(withTitleMessageAndAction: "Sucess", message: "Thanks for your order.", action: true)
+                } else {
+                    print("Something went wrong")
+                }
+                MBProgressHUD.hide(for: self?.view ?? UIView(), animated: true)
+            }
+        }
     }
-    */
-
 }

@@ -19,6 +19,7 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var prductSelectionButton: UIButton!
+    @IBOutlet weak var ratingLabel: UILabel!
     
     var cellDelegate: ProductTableViewCellDelegate?
     
@@ -45,6 +46,7 @@ class ProductTableViewCell: UITableViewCell {
     func updateUI(product: Product, isAddedToCart: Bool) {
         productNameLabel.text = product.name
         productPriceLabel.text = "₹ \(product.price ?? "0")"
+        ratingLabel.text = "\(product.rating ?? 0) *"
         if let imageUrl = product.imageURL {
             productImageview.kf.setImage(with: URL(string: imageUrl))
         }

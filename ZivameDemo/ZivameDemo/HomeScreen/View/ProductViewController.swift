@@ -14,36 +14,41 @@ class ProductViewController: UIViewController {
     //cart and checkout
     @IBOutlet weak var cartProductCountLabel: UILabel!
     
-    @IBOutlet weak var checkoutButton: UIButton!
+    @IBOutlet weak var checkoutButton: UIButton! {
+        didSet {
+            checkoutButton.backgroundColor = .lightGray
+            checkoutButton.layer.cornerRadius = 5
+        }
+    }
     
     private let productViewModel = ProductViewModel()
-    private let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         registerCell()
-        productViewModel.getProductFromAPI { [weak self] (receivedResponse) in
-            if receivedResponse {
-                self?.productTableView.reloadData()
-            }
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         productViewModel.fetchAddedProductsFromCart { (isFetched) in
+            cartProductCountLabel.text = "\(productViewModel.addedProductsInCart.count)"
             self.productTableView.reloadData()
         }
     }
     
     @IBAction func segmentDidChanged(_ sender: UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
         productViewModel.currentSegmentIndex = sender.selectedSegmentIndex
         productTableView.reloadData()
     }
     
     @IBAction func checkoutButtonPressed(_ sender: UIButton) {
-        
+        if productViewModel.addedProductsInCart.isEmpty {// show alert
+            showAlert(withTitleMessageAndAction: "Warning!!!", message: " Please add products to checkout", action: false)
+        } else {// move to checkout screen
+            let vc = storyboard?.instantiateViewController(withIdentifier: "CheckOutViewController") as! CheckOutViewController
+              navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -67,15 +72,21 @@ extension ProductViewController: ProductTableViewCellDelegate {
         let product = productViewModel.getFilteredProductDetails()[index]
         productViewModel.addProductToCoreData(productDetails: product) { (isSavedToCoreData) in
             if isSavedToCoreData {
+                cartProductCountLabel.text = "\(productViewModel.addedProductsInCart.count)"
                 productTableView.reloadData()
             }
         }
-        
     }
     
     func removeProduct(withSelectedIndex index: Int) {
         let product = productViewModel.getFilteredProductDetails()[index]
-        productTableView.reloadData()
+        productViewModel.removeProductFromCoreData(product: product) { [weak self] (isRemoved) in
+            if !isRemoved {
+               print("something went wrong while removing product from core data")
+            }
+            cartProductCountLabel.text = "\(productViewModel.addedProductsInCart.count)"
+            self?.productTableView.reloadData()
+        }
     }
 }
 
@@ -83,6 +94,16 @@ private extension ProductViewController {
     func registerCell() {
        productTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
    }
+    
+    func setupUI() {
+       
+        productViewModel.getProductFromAPI { [weak self] (receivedResponse) in
+            if receivedResponse {
+                self?.productTableView.reloadData()
+            }
+        }
+        
+    }
 }
 
 extension UIViewController {

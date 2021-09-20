@@ -6,7 +6,7 @@ target 'ZivameDemo' do
   use_frameworks!
 pod 'Alamofire'
 pod 'Kingfisher'
-
+pod 'MBProgressHUD'
   # Pods for ZivameDemo
 
   target 'ZivameDemoTests' do
